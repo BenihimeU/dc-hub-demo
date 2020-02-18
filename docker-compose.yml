@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  user11web:
+    image: user11webimage:v2
+    # docker file name if different from Dockerfile build: .
+    build: 
+      context: .
+      dockerfile: User11Dockerfile
+    container_name: user11webc
+    ports:
+      - "3473:80"
+      - "3474:81"
